@@ -1,7 +1,7 @@
 version: '3'
 services:
   tunnel:
-    image: ssh-tunneler:latest
+    image: ghcr.io/f-alotaibi/ssh-tunneling:latest
     environment:
       SERVER_HOST: "test@eu.a.pinggy.io"
       SERVER_PORT: 443
