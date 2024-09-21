@@ -1,0 +1,17 @@
+version: '3'
+services:
+  tunnel:
+    image: ssh-tunneler:latest
+    environment:
+      SERVER_HOST: "test@eu.a.pinggy.io"
+      SERVER_PORT: 443
+      SERVER_BIND_PORT: 0
+      REMOTE_HOST: caddy
+      REMOTE_PORT: 80
+      SSH_ARGS: "-o StrictHostKeyChecking=no"
+    depends_on:
+      - caddy
+  caddy:
+    image: caddy:2.8-alpine
+    ports:
+      - 80:80
