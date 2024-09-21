@@ -11,5 +11,5 @@ jobs:
       - name: Build & push the image
         run: |
           docker login --username f-alotaibi --password ${{ secrets.GH_TOKEN }} ghcr.io
-          docker build . -t ghcr.io/f-alotaibi/ssh-tunneling@latest
-          docker push ghcr.io/f-alotaibi/ssh-tunneling@latest
+          docker build . -t ghcr.io/f-alotaibi/ssh-tunneling:latest
+          docker push ghcr.io/f-alotaibi/ssh-tunneling:latest
